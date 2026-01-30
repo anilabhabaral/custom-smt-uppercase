@@ -1,2 +1,2 @@
 # custom-smt-uppercase
-Custom SMT for converting string from lowercase to uppercase
+Custom SMT for converting string field from lowercase to uppercase
