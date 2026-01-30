@@ -1,4 +1,4 @@
-package com.example.kafka.connect.transforms;
+package com.anilabha.kafka.connect.transforms;
 
 import org.apache.kafka.common.config.ConfigDef;
 import org.apache.kafka.connect.connector.ConnectRecord;

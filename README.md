@@ -4,7 +4,7 @@ Custom SMT for converting string field from lowercase to uppercase
 Configuration:
 ```
   "transforms": "CapName",
-  "transforms.CapName.type": "com.example.kafka.connect.transforms.CapitalizeField",
+  "transforms.CapName.type": "com.anilabha.kafka.connect.transforms.CapitalizeField",
   "transforms.CapName.field.name": "name"
 ```
 Example:
