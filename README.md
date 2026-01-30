@@ -1,6 +1,6 @@
 # Custom SMT to convert a string field from lowercase to uppercase.
 
-### Step-by-step process to install your custom SMT:
+### Step-by-step process to install custom SMT:
 
 1. Download SMT jar:
 ```
