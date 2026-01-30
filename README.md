@@ -10,13 +10,13 @@ wget https://github.com/anilabhabaral/custom-smt-uppercase/releases/download/1.0
 
 3. Create a new folder inside that plugin path (e.g., /plugins/custom-uppercase-smt/).
 
-4. Copy your JAR file directly into that specific new folder.
+4. Copy the JAR `custom-smt-uppercase-1.0.0.jar` file directly into that specific new folder.
 
 5. Restart all of your Kafka Connect worker processes.
 
 6. Verify the install by checking the localhost:8083/connector-plugins REST endpoint.
 
-7. Update your connector JSON config to include the new transforms properties.Compile your Java project into a JAR file using Maven or Gradle. Connector Configuration:
+7. Update the connector JSON config to include the new transforms properties. Connector Configuration:
 ```
   "transforms": "CapName",
   "transforms.CapName.type": "com.anilabha.kafka.connect.transforms.CapitalizeField",
