@@ -8,13 +8,6 @@
   <version>1.0.0</version>
   <name>custom-smt-uppercase</name>
   <packaging>jar</packaging>
-<distributionManagement>
-    <repository>
-        <id>github</id>
-        <name>GitHub Packages</name>
-        <url>https://maven.pkg.github.com</url>
-    </repository>
-</distributionManagement>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
