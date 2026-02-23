@@ -14,7 +14,7 @@ wget https://github.com/anilabhabaral/custom-smt-uppercase/releases/download/1.0
 
 5. Restart all of your Kafka Connect worker processes.
 
-6. Verify the install by checking the localhost:8083/connector-plugins REST endpoint.
+6. Verify the install by checking the `localhost:8083/connector-plugins` REST endpoint.
 
 7. Update the connector JSON config to include the new transforms properties. Connector Configuration:
 ```
