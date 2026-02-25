@@ -4,10 +4,10 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.anilabha.kafka.connect.transforms</groupId>
   <artifactId>custom-smt-uppercase</artifactId>
-  <!-- <version>1.0.0</version> -->
+  <version>1.0.0</version>
   <name>custom-smt-uppercase</name>
   <packaging>jar</packaging>
-<version>1.0.2-SNAPSHOT</version>
+<!-- <version>1.0.2-SNAPSHOT</version> -->
 
     <scm>
         <connection>scm:git:https://github.com/anilabhabaral/custom-smt-uppercase.git</connection>
