@@ -59,6 +59,10 @@
 #           generate_release_notes: true
 
 
+
+
+
+
 name: Manual Release
 
 on:
@@ -92,8 +96,7 @@ jobs:
 
       - name: Extract Version using Maven Exec
         run: |
-          # 100% reliable: asks Maven's internal engine to echo the version directly
-          # The -q flag ensures absolutely no other logs are printed
+          # We use Maven itself to echo the version. No external tools like xmllint needed!
           RAW_VERSION=$(mvn -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)
           
           # Strips the -SNAPSHOT so it correctly matches the tag Maven is about to create
@@ -116,7 +119,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         if: success()
         with:
-          # This will dynamically output "v1.0.1" and "Release v1.0.1"
           tag_name: v${{ env.CLEAN_VERSION }}
           name: Release v${{ env.CLEAN_VERSION }}
           files: target/*.jar
