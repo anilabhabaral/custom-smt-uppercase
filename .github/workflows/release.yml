@@ -36,7 +36,7 @@ jobs:
           RAW_VERSION=$(grep -m 1 '<version>' pom.xml | sed -e 's/.*<version>\(.*\)<\/version>.*/\1/' | tr -d ' ')
           
           # Removes the -SNAPSHOT suffix for the final release tag
-          CLEAN_VERSION=$(echo $RAW_VERSION | sed 's/-SNAPSHOT//')
+          # CLEAN_VERSION=$(echo $RAW_VERSION | sed 's/-SNAPSHOT//')
           
           echo "Raw version extracted: $RAW_VERSION"
           echo "Clean version for Release: $CLEAN_VERSION"
