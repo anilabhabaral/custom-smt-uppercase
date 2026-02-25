@@ -7,13 +7,13 @@
   <!-- <version>1.0.0</version> -->
   <name>custom-smt-uppercase</name>
   <packaging>jar</packaging>
-<version>1.0.1-SNAPSHOT</version>
+<version>1.0.1</version>
 
     <scm>
         <connection>scm:git:https://github.com/anilabhabaral/custom-smt-uppercase.git</connection>
         <developerConnection>scm:git:https://github.com/anilabhabaral/custom-smt-uppercase.git</developerConnection>
         <url>https://github.com/anilabhabaral/custom-smt-uppercase</url>
-        <tag>HEAD</tag>
+        <tag>v1.0.1</tag>
     </scm>
 
   <properties>
