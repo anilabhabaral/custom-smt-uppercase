@@ -90,10 +90,11 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git pull origin main --rebase 
 
-      - name: Extract Version from pom.xml securely
+      - name: Extract Version using Maven Exec
         run: |
-          # 100% reliable XML parsing. It explicitly targets the root project version.
-          RAW_VERSION=$(xmllint --xpath "/*[local-name()='project']/*[local-name()='version']/text()" pom.xml)
+          # 100% reliable: asks Maven's internal engine to echo the version directly
+          # The -q flag ensures absolutely no other logs are printed
+          RAW_VERSION=$(mvn -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)
           
           # Strips the -SNAPSHOT so it correctly matches the tag Maven is about to create
           CLEAN_VERSION=$(echo "$RAW_VERSION" | sed 's/-SNAPSHOT//')
