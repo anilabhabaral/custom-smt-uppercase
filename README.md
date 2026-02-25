@@ -4,7 +4,7 @@
 
 1. Download SMT jar:
 ```
-wget https://github.com/anilabhabaral/custom-smt-uppercase/releases/download/1.0/custom-smt-uppercase-1.0.0.jar
+wget https://github.com/anilabhabaral/custom-smt-uppercase/releases/download/v1.0.0/custom-smt-uppercase-1.0.0.jar
 ```
 2. Identify the plugin.path directory in your connect-distributed.properties file.
 
