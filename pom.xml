@@ -9,6 +9,13 @@
   <name>custom-smt-uppercase</name>
   <packaging>jar</packaging>
 
+    <scm>
+        <connection>scm:git:https://github.com/anilabhabaral/custom-smt-uppercase.git</connection>
+        <developerConnection>scm:git:https://github.com/anilabhabaral/custom-smt-uppercase.git</developerConnection>
+        <url>https://github.com/anilabhabaral/custom-smt-uppercase</url>
+        <tag>HEAD</tag>
+    </scm>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
