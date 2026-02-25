@@ -19,7 +19,7 @@ jobs:
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
+          java-version: '17' # Adjust to 11 if your Kafka environment requires it
           distribution: 'temurin'
           cache: 'maven'
 
@@ -32,11 +32,8 @@ jobs:
       - name: Extract Version from pom.xml
         run: |
           # 100% reliable text extraction, bypassing Maven completely
-          # Grabs the very first <version> tag in the file and extracts the text inside
           RAW_VERSION=$(grep -m 1 '<version>' pom.xml | sed -e 's/.*<version>\(.*\)<\/version>.*/\1/' | tr -d ' ')
-          
-          # Removes the -SNAPSHOT suffix for the final release tag
-          # CLEAN_VERSION=$(echo $RAW_VERSION | sed 's/-SNAPSHOT//')
+          CLEAN_VERSION=$(echo $RAW_VERSION | sed 's/-SNAPSHOT//')
           
           echo "Raw version extracted: $RAW_VERSION"
           echo "Clean version for Release: $CLEAN_VERSION"
@@ -55,8 +52,8 @@ jobs:
         uses: softprops/action-gh-release@v2
         if: success()
         with:
-          # This will correctly resolve to "v1.4" and "Release v1.4"
           tag_name: v${{ env.CLEAN_VERSION }}
           name: Release v${{ env.CLEAN_VERSION }}
+          # This grabs your compiled SMT jar to attach to the release
           files: target/*.jar
           generate_release_notes: true
