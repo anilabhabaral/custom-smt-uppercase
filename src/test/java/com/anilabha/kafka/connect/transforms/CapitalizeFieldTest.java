@@ -86,7 +86,7 @@ public class CapitalizeFieldTest {
 
     @Test
     public void testNonStringField() {
-        // When the configured field is missing from the payload, and a non-string field is present
+        // When the configured field is a non-string field is present
         Map<String, Object> value = new HashMap<>();
         value.put("id", 1);
         value.put("price", 100.123);
