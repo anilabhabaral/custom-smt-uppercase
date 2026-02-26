@@ -85,11 +85,10 @@ public class CapitalizeFieldTest {
     }
 
     @Test
-    public void testNonStringField() {
+    public void testNonStringField1() {
         // When the configured field is a non-string field is present
         Map<String, Object> value = new HashMap<>();
-        value.put("id", 1);
-        value.put("price", 100.123);
+        value.put("name", 1);
 
         SourceRecord record = new SourceRecord(null, null, "test-topic", 0, null, value);
         SourceRecord transformedRecord = xform.apply(record);
@@ -97,8 +96,23 @@ public class CapitalizeFieldTest {
         @SuppressWarnings("unchecked")
         Map<String, Object> updatedValue = (Map<String, Object>) transformedRecord.value();
 
-        Assert.assertEquals("Non String field should remain untouched and same",1, updatedValue.get("id"));
-        Assert.assertEquals("Non String field should remain untouched and same",100.123, updatedValue.get("price"));
+        Assert.assertEquals("Non String field should remain untouched and same",1, updatedValue.get("name"));
+
+    }
+
+    @Test
+    public void testNonStringField2() {
+        // When the configured field is a non-string field is present
+        Map<String, Object> value = new HashMap<>();
+        value.put("name", 100.123);
+
+        SourceRecord record = new SourceRecord(null, null, "test-topic", 0, null, value);
+        SourceRecord transformedRecord = xform.apply(record);
+
+        @SuppressWarnings("unchecked")
+        Map<String, Object> updatedValue = (Map<String, Object>) transformedRecord.value();
+
+        Assert.assertEquals("Non String field should remain untouched and same",100.123, updatedValue.get("name"));
 
     }
     
