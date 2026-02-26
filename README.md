@@ -1,4 +1,4 @@
-# Custom SMT to convert a string field from lowercase to uppercase.
+# Custom Single Message Transformations (SMT) to convert a string field from lowercase to uppercase.
 
 ### Step-by-step process to install custom SMT:
 
