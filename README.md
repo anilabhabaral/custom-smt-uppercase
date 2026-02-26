@@ -4,13 +4,13 @@
 
 1. Download SMT jar:
 ```
-wget https://github.com/anilabhabaral/custom-smt-uppercase/releases/download/v1.0.0/custom-smt-uppercase-1.0.0.jar
+wget https://github.com/anilabhabaral/custom-smt-uppercase/releases/download/v1.0.1/custom-smt-uppercase-1.0.1.jar
 ```
 2. Identify the plugin.path directory in your connect-distributed.properties file.
 
 3. Create a new folder inside that plugin path (e.g., /plugins/custom-uppercase-smt/).
 
-4. Copy the JAR `custom-smt-uppercase-1.0.0.jar` file directly into that specific new folder.
+4. Copy the JAR `custom-smt-uppercase-1.0.1.jar` file directly into that specific new folder.
 
 5. Restart all of your Kafka Connect worker processes.
 
