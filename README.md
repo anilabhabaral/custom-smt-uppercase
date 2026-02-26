@@ -44,5 +44,5 @@ wget https://github.com/anilabhabaral/custom-smt-uppercase/releases/download/v1.
 }
 ```
 ---
-### Interested in contributing to this project?
-- Want to add your own features or contribute to the project? We'd love your help! Check out the [contribution guidelines](https://github.com/anilabhabaral/custom-smt-uppercase/blob/main/CONTRIBUTING.md) to get started.
+### Want to add your own features or contribute to the project?
+We'd love your help! Check out the [contribution guidelines](https://github.com/anilabhabaral/custom-smt-uppercase/blob/main/CONTRIBUTING.md) to get started.
